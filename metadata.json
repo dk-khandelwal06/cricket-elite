@@ -1,0 +1,8 @@
+{
+  "name": "Cricket Elite",
+  "description": "A high-performance, responsive cricket platform featuring real-time match centers, live ball-by-ball commentary, tournament leaders, deep player statistics, team profiles, and series hubs.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

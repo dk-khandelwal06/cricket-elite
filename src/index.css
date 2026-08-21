@@ -1,0 +1,338 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-headline: 'Oswald', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+    --font-sans: 'Inter', sans-serif;
+    --font-condensed: 'Barlow Condensed', sans-serif;
+  }
+}
+
+.font-headline {
+  font-family: 'Oswald', sans-serif;
+}
+
+.font-mono-score {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.font-condensed {
+  font-family: 'Barlow Condensed', sans-serif;
+}
+
+/* Custom Sports & Stadium Clip Paths */
+.clip-trapezoid {
+  clip-path: polygon(0 0, 100% 0, 95% 100%, 0% 100%);
+}
+
+.clip-trapezoid-right {
+  clip-path: polygon(5% 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.clip-trapezoid-both {
+  clip-path: polygon(4% 0, 100% 0, 96% 100%, 0% 100%);
+}
+
+.clip-card-corner {
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%);
+}
+
+.clip-card-corner-top {
+  clip-path: polygon(0 0, calc(100% - 24px) 0, 100% 24px, 100% 100%, 0 100%);
+}
+
+.clip-badge-angled {
+  clip-path: polygon(10px 0, 100% 0, calc(100% - 10px) 100%, 0 100%);
+}
+
+.clip-diagonal {
+  clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%);
+}
+
+/* Glowing Neon & Stadium Effects */
+.glow-primary {
+  box-shadow: 0 0 25px rgba(107, 251, 154, 0.25);
+}
+
+.glow-primary-lg {
+  box-shadow: 0 0 45px rgba(107, 251, 154, 0.35);
+}
+
+.glow-gold {
+  box-shadow: 0 0 25px rgba(238, 194, 0, 0.25);
+}
+
+.glow-red {
+  box-shadow: 0 0 20px rgba(239, 68, 68, 0.3);
+}
+
+.border-inner-stadium {
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+}
+
+/* Animated Gradient & Scanlines */
+.scanline {
+  background: linear-gradient(
+    to bottom,
+    rgba(255,255,255,0),
+    rgba(255,255,255,0) 50%,
+    rgba(0, 0, 0, 0.25) 50%,
+    rgba(0, 0, 0, 0.25)
+  );
+  background-size: 100% 4px;
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.35s ease-out forwards;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0A0B0E;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #232733;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #22c55e;
+}
+
+/* Pulse keyframes for live ball commentary and radar */
+@keyframes radar-pulse {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(107, 251, 154, 0.7);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(107, 251, 154, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(107, 251, 154, 0);
+  }
+}
+
+.animate-radar {
+  animation: radar-pulse 2s infinite;
+}
+
+@keyframes pitch-glow {
+  0%, 100% { opacity: 0.8; }
+  50% { opacity: 1; }
+}
+
+.animate-pitch-glow {
+  animation: pitch-glow 3s ease-in-out infinite;
+}
+
+/* ==========================================================================
+   TRUE LIGHT MODE ARCHITECTURE & DESIGN SYSTEM
+   ========================================================================== */
+.theme-light {
+  background-color: #f1f5f9 !important;
+  color: #0f172a !important;
+}
+
+.theme-light ::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+.theme-light ::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+}
+
+.theme-light ::-webkit-scrollbar-thumb:hover {
+  background: #10b981;
+}
+
+/* Primary surface containers */
+.theme-light .bg-\[\#13151C\] {
+  background-color: #ffffff !important;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05), 0 1px 2px -1px rgba(0, 0, 0, 0.05);
+}
+
+.theme-light .bg-\[\#181B24\] {
+  background-color: #f8fafc !important;
+}
+
+.theme-light .bg-\[\#0A0B0E\] {
+  background-color: #edf2f7 !important;
+}
+
+.theme-light .bg-\[\#08090C\] {
+  background-color: #f1f5f9 !important;
+}
+
+.theme-light .bg-\[\#0D0F14\] {
+  background-color: #f8fafc !important;
+}
+
+.theme-light .bg-\[\#1C1F2B\] {
+  background-color: #e2e8f0 !important;
+}
+
+.theme-light .bg-\[\#1F2330\] {
+  background-color: #e2e8f0 !important;
+}
+
+.theme-light .hover\:bg-\[\#181B24\]:hover {
+  background-color: #f1f5f9 !important;
+}
+
+.theme-light .hover\:bg-\[\#1F2330\]:hover {
+  background-color: #e2e8f0 !important;
+}
+
+.theme-light .hover\:bg-\[\#1A1D26\]:hover {
+  background-color: #f1f5f9 !important;
+}
+
+/* Header & Tickers */
+.theme-light header {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  color: #0f172a !important;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+}
+
+.theme-light footer {
+  background-color: #ffffff !important;
+  border-top-color: #e2e8f0 !important;
+}
+
+/* Borders */
+.theme-light .border-\[\#232733\] {
+  border-color: #e2e8f0 !important;
+}
+
+.theme-light .border-\[\#4d3e23\] {
+  border-color: #d1b88a !important;
+}
+
+.theme-light .divide-\[\#232733\] > :not([hidden]) ~ :not([hidden]) {
+  border-color: #e2e8f0 !important;
+}
+
+/* Gradients */
+.theme-light .from-\[\#181A24\] {
+  --tw-gradient-from: #ffffff var(--tw-gradient-from-position) !important;
+}
+
+.theme-light .via-\[\#13151C\] {
+  --tw-gradient-via: #f8fafc var(--tw-gradient-via-position) !important;
+}
+
+.theme-light .to-\[\#0A0B0E\] {
+  --tw-gradient-to: #f1f5f9 var(--tw-gradient-to-position) !important;
+}
+
+.theme-light .from-\[\#181A22\] {
+  --tw-gradient-from: #ffffff var(--tw-gradient-from-position) !important;
+}
+
+.theme-light .to-\[\#0D0F14\] {
+  --tw-gradient-to: #f8fafc var(--tw-gradient-to-position) !important;
+}
+
+.theme-light .from-\[\#1E222D\] {
+  --tw-gradient-from: #f8fafc var(--tw-gradient-from-position) !important;
+}
+
+/* Text adjustments for high contrast readability */
+.theme-light .text-white {
+  color: #0f172a !important;
+}
+
+.theme-light .text-slate-100,
+.theme-light .text-slate-200 {
+  color: #1e293b !important;
+}
+
+.theme-light .text-slate-300 {
+  color: #334155 !important;
+}
+
+.theme-light .text-slate-400 {
+  color: #64748b !important;
+}
+
+.theme-light .text-slate-500 {
+  color: #64748b !important;
+}
+
+.theme-light .text-slate-600 {
+  color: #94a3b8 !important;
+}
+
+.theme-light .text-\[\#ffe083\] {
+  color: #b45309 !important;
+}
+
+.theme-light .bg-\[\#ffe083\] {
+  background-color: #d97706 !important;
+  color: #ffffff !important;
+}
+
+.theme-light .bg-\[\#ffe083\]\/10 {
+  background-color: rgba(217, 119, 6, 0.1) !important;
+}
+
+.theme-light .bg-\[\#ffe083\]\/20 {
+  background-color: rgba(217, 119, 6, 0.15) !important;
+}
+
+.theme-light .border-\[\#ffe083\] {
+  border-color: #d97706 !important;
+}
+
+.theme-light .border-\[\#ffe083\]\/30 {
+  border-color: rgba(217, 119, 6, 0.3) !important;
+}
+
+.theme-light .border-\[\#ffe083\]\/40 {
+  border-color: rgba(217, 119, 6, 0.4) !important;
+}
+
+/* Modals backdrop */
+.theme-light .bg-black\/80 {
+  background-color: rgba(15, 23, 42, 0.65) !important;
+}
+
+/* Inputs & Form controls in Light Mode */
+.theme-light input,
+.theme-light select {
+  color: #0f172a !important;
+}
+
+.theme-light input::placeholder {
+  color: #94a3b8 !important;
+}
+
+/* Pitch & Wagon Wheel in Light Mode */
+.theme-light .bg-gradient-to-b.from-\[\#251f14\] {
+  --tw-gradient-from: #8c734b var(--tw-gradient-from-position) !important;
+  --tw-gradient-via: #a3895e var(--tw-gradient-via-position) !important;
+  --tw-gradient-to: #8c734b var(--tw-gradient-to-position) !important;
+}
+

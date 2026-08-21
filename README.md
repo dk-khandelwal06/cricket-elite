@@ -1,2 +1,20 @@
-# cricket-elite
-A premium, interactive cricket analytics platform featuring live match simulations, player statistics, match centers, tournaments, rankings, news, and immersive cricket-inspired visualizations.
+<div align="center">
+<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
+</div>
+
+# Run and deploy your AI Studio app
+
+This contains everything you need to run your app locally.
+
+View your app in AI Studio: https://ai.studio/apps/a54a117e-6330-43b8-9488-46e7c80b287f
+
+## Run Locally
+
+**Prerequisites:**  Node.js
+
+
+1. Install dependencies:
+   `npm install`
+2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
+3. Run the app:
+   `npm run dev`
